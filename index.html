@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>武胜桥养老服务中心 - 暖心福利海报</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7e9d7;  /* 暖色基底背景 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', 'Roboto', 'Noto Sans CJK SC', 'Microsoft YaHei', 'PingFang SC', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            padding: 24px;
+        }
+
+        /* 主海报卡片 — 暖色调，柔和圆角，温馨阴影 */
+        .poster {
+            max-width: 1000px;
+            width: 100%;
+            background: linear-gradient(145deg, #fff5e8 0%, #ffefdd 100%);
+            border-radius: 56px 56px 56px 56px;
+            box-shadow: 0 25px 45px rgba(120, 70, 30, 0.2), 0 8px 18px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        /* 装饰头 - 暖色飘带元素 */
+        .hero-badge {
+            background: #e77d2e;
+            background: linear-gradient(95deg, #f39c12 0%, #e67e22 100%);
+            padding: 12px 28px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .hero-badge span {
+            background: #ffd966;
+            color: #b45f1b;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            margin-left: 12px;
+        }
+
+        /* 主标题区域 */
+        .main-title {
+            text-align: center;
+            padding: 30px 20px 10px 20px;
+        }
+        .main-title h1 {
+            font-size: 2.9rem;
+            font-weight: 800;
+            color: #b64926;
+            text-shadow: 2px 2px 0 #ffddb0;
+            letter-spacing: 2px;
+        }
+        .main-title p {
+            font-size: 1.2rem;
+            color: #d35400;
+            background: #fff0e0;
+            display: inline-block;
+            padding: 6px 24px;
+            border-radius: 40px;
+            margin-top: 12px;
+            font-weight: 600;
+            backdrop-filter: blur(2px);
+        }
+
+        /* 双福利卡片 — 两大核心钩子突出 */
+        .benefits-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            padding: 20px 32px 32px 32px;
+            justify-content: center;
+        }
+        .benefit-card {
+            flex: 1;
+            min-width: 260px;
+            background: #ffffffd9;
+            backdrop-filter: blur(2px);
+            border-radius: 44px;
+            padding: 24px 20px;
+            box-shadow: 0 15px 25px rgba(160, 100, 30, 0.15);
+            transition: transform 0.2s ease;
+            border: 1px solid #ffddb0;
+            text-align: center;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        .free-label {
+            background: #f7b05e;
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 60px;
+            color: white;
+            font-weight: 800;
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .benefit-card h3 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #c0392b;
+            margin: 10px 0;
+        }
+        .age-tag {
+            background: #fdebd0;
+            border-radius: 60px;
+            padding: 6px 14px;
+            font-weight: bold;
+            color: #a04000;
+            display: inline-block;
+            margin: 12px 0;
+        }
+        .desc-text {
+            font-size: 1rem;
+            color: #5d3a1a;
+            line-height: 1.45;
+            margin: 16px 0;
+            font-weight: 500;
+        }
+        .date-highlight {
+            background: #ffe0b5;
+            border-radius: 30px;
+            padding: 8px 12px;
+            font-weight: bold;
+            color: #b64926;
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 0.9rem;
+        }
+        .badge-icon {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        /* 入住舒适亮点区域 体现 安心 放心 舒心 */
+        .feature-showcase {
+            background: #ffefdb;
+            margin: 0 28px 28px 28px;
+            border-radius: 48px;
+            padding: 28px 20px;
+            box-shadow: inset 0 1px 4px #fff8f0, 0 8px 18px rgba(0,0,0,0.05);
+        }
+        .feature-title {
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #b64926;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .feature-item {
+            flex: 1;
+            min-width: 160px;
+            background: white;
+            border-radius: 36px;
+            padding: 16px 12px;
+            text-align: center;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+        .feature-emoji {
+            font-size: 2rem;
+        }
+        .feature-item h4 {
+            color: #cc7b2c;
+            font-size: 1.2rem;
+            margin: 8px 0 4px;
+        }
+        .feature-item p {
+            color: #5a3e28;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* 须知部分 简单干净 */
+        .notice {
+            background: #fff7e8;
+            margin: 0 28px 28px 28px;
+            border-radius: 40px;
+            padding: 20px 24px;
+            border-left: 8px solid #f39c12;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .notice h4 {
+            color: #c06d1f;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .notice ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+        }
+        .notice li {
+            font-size: 0.92rem;
+            color: #4d351b;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .notice li::before {
+            content: "✓";
+            color: #e67e22;
+            font-weight: bold;
+        }
+
+        /* 联系方式区块 */
+        .contact {
+            background: #e6cba2;
+            background: linear-gradient(115deg, #f5e1b5, #fad6a0);
+            padding: 24px 32px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            border-top: 1px solid #ffcf8e;
+        }
+        .address {
+            font-weight: 600;
+            color: #794f29;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+        }
+        .phones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .phone {
+            background: white;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-weight: bold;
+            color: #b45a1c;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: 0.1s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .phone:hover {
+            background: #ffecd6;
+        }
+        .footer-note {
+            text-align: center;
+            font-size: 0.75rem;
+            padding: 12px;
+            color: #a16e3a;
+            background: #fff2e2;
+        }
+
+        /* 活动时间重点突出 */
+        .timer-block {
+            background: #f6e1c1;
+            border-radius: 30px;
+            text-align: center;
+            margin: 0 28px 18px 28px;
+            padding: 10px;
+            font-weight: bold;
+            color: #c9421f;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 720px) {
+            .main-title h1 { font-size: 1.9rem; }
+            .benefit-card h3 { font-size: 1.5rem; }
+            .feature-title { font-size: 1.3rem; }
+            .poster { border-radius: 32px; }
+            .benefits-grid { padding: 20px; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <!-- 顶部喜庆飘带 开业氛围 -->
+        <div class="hero-badge">
+            🎉 盛大开业 · 暖心献礼 🎉
+            <span>限时福利 真实无套路</span>
+        </div>
+
+        <!-- 主标题 -->
+        <div class="main-title">
+            <h1>武胜桥养老服务中心</h1>
+            <p>🏡 让老人住着安心 · 放心 · 舒心 🏡</p>
+        </div>
+
+        <!-- 两大核心免费福利钩子 视觉C位 -->
+        <div class="benefits-grid">
+            <!-- 福利1: 免费午餐 -->
+            <div class="benefit-card">
+                <div class="badge-icon">🍲🥢</div>
+                <div class="free-label">🔥 福利一 · 实打实免费 🔥</div>
+                <h3>免费吃午餐</h3>
+                <div class="age-tag">✅ 年满60周岁</div>
+                <div class="desc-text">
+                    不用花钱！不用办卡！无门槛！<br>
+                    带身份证到院，每天热乎午餐<br>
+                    荤素搭配 · 软烂可口 · 不用洗碗
+                </div>
+                <div class="date-highlight">
+                    📅 2026年4月15日 ~ 4月21日
+                </div>
+                <div style="margin-top: 12px; font-size:0.85rem; background:#feeedc; border-radius: 30px; padding: 6px;">🍚 省心暖胃，乐享无忧</div>
+            </div>
+
+            <!-- 福利2: 免费住8天 (失能/半失能) -->
+            <div class="benefit-card">
+                <div class="badge-icon">🛏️❤️</div>
+                <div class="free-label">🔥 福利二 · 真实试住 🔥</div>
+                <h3>免费住<strong style="font-size:2rem;"> 8天</strong></h3>
+                <div class="age-tag">👵 失能 / 半失能老人专享</div>
+                <div class="desc-text">
+                    生活不能自理、半自理长辈<br>
+                    吃住全免 · 基础护理全免<br>
+                    亲身感受贴心照护，体验了再说！
+                </div>
+                <div class="date-highlight">
+                    📅 即日起可预约 (活动期间优先安排)
+                </div>
+                <div style="margin-top: 12px; font-size:0.85rem; background:#feeedc; border-radius: 30px; padding: 6px;">💧 护理员随叫随到，喂饭擦身翻身样样细心</div>
+            </div>
+        </div>
+
+        <!-- 舒适居住·安心照护 展示区 (舒心、放心、安心) -->
+        <div class="feature-showcase">
+            <div class="feature-title">
+                <span>🏠 住在这里 · 长辈舒心 家属放心 🏠</span>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-emoji">👩‍⚕️🛎️</div>
+                    <h4>24h专业照护</h4>
+                    <p>护理员随叫随到，喂饭、擦身、翻身、提醒用药，细心周到</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-emoji">🛋️🚪</div>
+                    <h4>房间舒适安全</h4>
+                    <p>适老化扶手、独立卫生间、紧急呼叫器，宽敞明亮住着安心</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-emoji">🍲🥗</div>
+                    <h4>三餐营养健康</h4>
+                    <p>新鲜食材，清淡软嫩，适合老人肠胃，顿顿不重样</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-emoji">♟️🎤</div>
+                    <h4>晚年不孤单</h4>
+                    <p>棋牌聊天、休闲活动多，老伙伴一起乐呵，日子有滋味</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 参与方式及须知 (简单清晰) -->
+        <div class="notice">
+            <h4>📌 简单参与须知 · 福利真实有效</h4>
+            <ul>
+                <li><strong>🍽️ 免费午餐：</strong>60岁以上老人，凭身份证直接到院用餐 (活动时间:2026.4.15-4.21)</li>
+                <li><strong>🏡 免费试住8天：</strong>失能/半失能老人，家属陪同登记，专业人员评估后即可安排8天免费试住（吃住+基础护理全免）</li>
+                <li><strong>⭐ 无隐形消费 · 无强制消费 · 纯公益福利</strong></li>
+                <li><strong>📍 地址：</strong>武胜桥镇东王庄新村小区内</li>
+            </ul>
+        </div>
+        <!-- 额外醒目日期提示 -->
+        <div class="timer-block">
+            ⏰ 免费午餐限时体验：2026年4月15日 — 2026年4月22日 (共8天暖心福利)
+        </div>
+
+        <!-- 联系方式 暖色调底纹 -->
+        <div class="contact">
+            <div class="address">
+                📍 养老院地址：武胜桥镇东王庄新村小区内
+            </div>
+            <div class="phones">
+                <span class="phone">📞 王院长 13126168009</span>
+                <span class="phone">📞 付院长 18201221251</span>
+                <span class="phone">📞 孙院长 16658937078</span>
+            </div>
+        </div>
+        <div class="footer-note">
+            * 活动最终解释权归武胜桥养老服务中心所有，福利名额有限，请家属提前咨询预约。
+        </div>
+    </div>
+</body>
+</html>
+```
